@@ -22,26 +22,6 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<scm>
-		<connection>scm:git:git@github.com:beothorn/URISchemeHandler.git</connection>
-		<developerConnection>scm:git|ssh://git@github.com/beothorn/URISchemeHandler.git</developerConnection>
-		<url>git@github.com:beothorn/URISchemeHandler.git</url>
-	</scm>
-
-	<developers>
-		<developer>
-			<id>beothorn</id>
-			<name>Beothorn</name>
-		</developer>
-	</developers>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -56,17 +36,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>ossrh</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -122,10 +91,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
 </project>
